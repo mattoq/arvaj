@@ -1,23 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-widh, initial-scale.0">
-        <meta http-equiv="X UA-Compatible" content="ie=edge">
-        <title>HTML 5 Boilerplate</title>
-        
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Zručnosti — Martin Grnáč</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <style>
+            :root{--bg:#f3f4f6;--card:#fff;--muted:#6b7280;--accent:#0ea5a4;--max-width:900px}
+            *{box-sizing:border-box}
+            body{margin:0;font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);color:#0f172a}
+            .wrap{max-width:var(--max-width);margin:40px auto;padding:24px}
+            header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+            .brand{display:flex;flex-direction:column}
+            h1{margin:0;font-size:1.6rem}
+            nav a{color:var(--accent);text-decoration:none;margin-left:12px;font-weight:600}
+            main{margin-top:20px;display:grid;gap:20px}
+            .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+            .muted{color:var(--muted)}
+            footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.9rem}
+            ul{margin:0 0 0 1.2rem}
+            .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+            @media(max-width:700px){.skills-grid{grid-template-columns:1fr}}
+        </style>
     </head>
-    <body bgcolor="lightgray">
-        <h1>Technické zručnosti</h1>
-        <ul>
-            <h2>Programovacie jazyky</h2>
-            <li>HTML: pokročilý</li>
-            <li>CSS: pokročilý</li>
-            <li>Python: Základy</li>
-            <li>C++: Pokročilý</li>
-            <h2>Nástroje</h2>
-            <li>Linux</li>
-            <li>Git/GitHub</li>
-            <li>VS code</li>
-        </ul>
+    <body>
+        <div class="wrap">
+            <header>
+                <div class="brand">
+                    <h1>Technické zručnosti</h1>
+                    <div class="muted">Martin Grnáč</div>
+                </div>
+                <nav>
+                    <a href="home.html">Domov</a>
+                    <a href="Vzdelanie.html">Vzdelanie</a>
+                    <a href="zrucnosti.html">Zručnosti</a>
+                    <a href="doplnkove.html">Doplnkové</a>
+                </nav>
+            </header>
+
+            <main>
+                <section class="card">
+                    <div class="skills-grid">
+                        <div>
+                            <h3>Programovacie jazyky</h3>
+                            <ul>
+                                <li><strong>HTML</strong> — pokročilý</li>
+                                <li><strong>CSS</strong> — pokročilý</li>
+                                <li><strong>Python</strong> — základy</li>
+                                <li><strong>C++</strong> — pokročilý</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3>Nástroje a prostredia</h3>
+                            <ul>
+                                <li>Linux</li>
+                                <li>Git / GitHub</li>
+                                <li>Visual Studio Code</li>
+                                <li>Sieťové nástroje (základná práca s routermi/switchmi)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <div>© <span id="year"></span> Martin Grnáč</div>
+            </footer>
+        </div>
+        <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
     </body>
+</html>
